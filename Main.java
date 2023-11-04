@@ -1,4 +1,4 @@
-class index{
+class Main{
     public static void main(String[] args) {
         System.out.println("Simple hellow world ");
     }
