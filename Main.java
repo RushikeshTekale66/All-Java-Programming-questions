@@ -6,7 +6,6 @@ class Main{
         System.out.println("Enter the number");
         int a = sc.nextInt();
         int Doublenumber = a<<1;
-        System.out.println("Double of number is: " + Doublenumber
-        );
+        System.out.println("Double of number is: " + Doublenumber);
     }
 }
