@@ -1,15 +1,14 @@
 import java.util.Scanner;
 
-class Main{
+class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the range of number");
+        System.out.println("Enter the number");
         int n = sc.nextInt();
-        System.out.print("Even numbers are : ");
-        for(int i=1; i<=n; i++){
-            if(i%2==0){
-                System.out.print(i+", ");
-            }
+        if (n % 2 == 0) {
+            System.out.print("The number is even");
+        } else {
+            System.out.println("The number is odd");
         }
     }
 }
