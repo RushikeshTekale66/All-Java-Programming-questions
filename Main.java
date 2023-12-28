@@ -1,14 +1,19 @@
-import java.util.Scanner;
+class Test{
+    public void add(int a , int b){
+        System.out.println(a+b);
+    }
+    public void add(double a, double b){
+        System.out.println(a+b);
+    }
+}
 
-class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number ");
-        int n = sc.nextInt();
-        int factorial=1;
-        for(int i=1; i<=n; i++){
-            factorial = factorial*i;
-        }
-        System.out.println("Factorial of Number is: "+ factorial);
+//Method Overloading / Compile time polymorphism
+//Same method with different parameter in same class
+
+class Main{
+    public static void main(String [] args){
+        Test T = new Test();
+        T.add(3,4);
+        T.add(3.2, 4.4);
     }
 }
