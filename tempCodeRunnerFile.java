@@ -1,2 +1,3 @@
-w Test();
-        T.add(3,4);
+ = arr[i];
+                        arr[i]=arr[j];
+                        arr[j]=temp;
