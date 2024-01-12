@@ -1,25 +1,26 @@
 import java.util.Scanner;
 
-class Main{
-    public static void main(String [] args){
-       int [] arr = {9,8,7,6,200,4,100,2,1,10};
-       int n = arr.length;
-       for(int i=0; i<n; i++){
-            for(int j=i+1; j<n; j++){
-                    // if(arr[j]<arr[i]){
-                    //     int temp = arr[i];
-                    //     arr[j]=arr[i];
-                    //     arr[i]=temp;
-                    // }
-                    if(arr[i]<arr[j]){
-                        int temp = arr[i];
-                        arr[i]=arr[j];
-                        arr[j]=temp;
-                    }
+class Main {
+    public static void main(String args []) {
+        Scanner sc = new Scanner(System.in);
+        int i, m = 0, flag = 0;
+        System.out.println("Enter the number you want to check");
+        int n = sc.nextInt();// it is the number to be checked
+        m = n / 2;
+        if (n == 0 || n == 1) {
+            System.out.println(n + " is not prime number");
+        } else {
+            for (i = 2; i <= m; i++) {
+                if (n % i == 0) {
+                    System.out.println(n + " is not prime number");
+                    flag = 1;
+                    break;
+                }
             }
-       }
-       for(int i=0; i<n; i++){
-        System.out.println(arr[i]);
-       }
+            if (flag == 0) {
+                System.out.println(n + " is prime number");
+            }
+        } // end of else
     }
+
 }
