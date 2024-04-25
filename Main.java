@@ -1,44 +1,26 @@
 import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 
-// find the array type wether it is even || odd || mix type
+		System.out.println("Enter the total lit petrol");
+		double Totalfuel = sc.nextDouble();
 
-class Main {
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
+		System.out.println("Total price of petrol filled");
+		double totalfilledfuelprice = sc.nextDouble();
 
-        System.out.println("Enter the array length");
-        int n = sc.nextInt();
+		System.out.println("Current Reading");
+		double currentkm = sc.nextInt();
 
-        int[] arr = new int[n];
+		System.out.println("Previous Reading");
+		double prevkm = sc.nextInt();
 
-        for (int i = 0; i < n; i++) {
-            System.out.println("Enter the next integer");
-            arr[i] = sc.nextInt();
-        }
-
-        int oddcount = 0;
-        int evencount = 0;
-        int mixcount = 0;
-
-        for (int i = 0; i < n; i++) {
-            if (arr[i] % 2 == 0) {
-                evencount++;
-            } else if (arr[i] % 2 != 0) {
-                oddcount++;
-            } else {
-                mixcount++;
-            }
-        }
-
-        System.out.println("Evencount "+evencount + "\nOddcount " + oddcount + "\nMixcount " + mixcount);
-
-        if (evencount == n)
-            System.out.println("Array is of even type");
-        else if (oddcount == n)
-            System.out.println("Array is of odd type");
-        else
-            System.out.println("Array is of mix type");
-
-    }
-
+		double fulperlit = totalfilledfuelprice/Totalfuel;
+		double avg =  (currentkm-prevkm)/Totalfuel;
+		double cost = fulperlit /avg;
+        
+		System.out.println("Average of Bike "+ avg);
+		System.out.println("Cost per km "+ cost);
+	}
 }
