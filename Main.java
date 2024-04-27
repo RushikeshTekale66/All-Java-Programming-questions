@@ -4,23 +4,16 @@ public class Main
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Enter the total lit petrol");
-		double Totalfuel = sc.nextDouble();
+		System.out.println("First String");
+		// return the full input of string
+		String str = sc.nextLine();
 
-		System.out.println("Total price of petrol filled");
-		double totalfilledfuelprice = sc.nextDouble();
-
-		System.out.println("Current Reading");
-		double currentkm = sc.nextInt();
-
-		System.out.println("Previous Reading");
-		double prevkm = sc.nextInt();
-
-		double fuelperlit = totalfilledfuelprice/Totalfuel;
-		double avg =  (currentkm-prevkm)/Totalfuel;
-		double cost = fuelperlit /avg;
-        
-		System.out.println("Average of Bike "+ avg);
-		System.out.println("Cost per km "+ cost);
+		System.out.println("Second String");
+		// return only first word ie. till the saparator
+		String str2 = sc.next();
+		
+		System.out.println(str+" first & second is " + str2);
+		
+		
 	}
 }
