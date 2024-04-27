@@ -4,15 +4,13 @@ public class Main
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("First String");
-		// return the full input of string
+		System.out.println("Enter the String");
 		String str = sc.nextLine();
-
-		System.out.println("Second String");
-		// return only first word ie. till the saparator
-		String str2 = sc.next();
-		
-		System.out.println(str+" first & second is " + str2);
+		String str2 = "";
+		for(int i=0; i< str.length()/2; i++){
+			str2 = str2 + str.charAt(i);
+		}
+		System.err.println(str2);
 		
 		
 	}
