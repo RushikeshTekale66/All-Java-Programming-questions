@@ -16,9 +16,9 @@ public class Main
 		System.out.println("Previous Reading");
 		double prevkm = sc.nextInt();
 
-		double fulperlit = totalfilledfuelprice/Totalfuel;
+		double fuelperlit = totalfilledfuelprice/Totalfuel;
 		double avg =  (currentkm-prevkm)/Totalfuel;
-		double cost = fulperlit /avg;
+		double cost = fuelperlit /avg;
         
 		System.out.println("Average of Bike "+ avg);
 		System.out.println("Cost per km "+ cost);
