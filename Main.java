@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 // Max occuring number in array & its count
@@ -8,17 +9,12 @@ public class Main {
 		int number = 0;
 		for (int i = 0; i < arr.length; i++) {
 			int count = 0;
-			for (int j = i; j < arr.length; j++) {
+			for (int j = 0; j < arr.length; j++) {
 				if (arr[i] == arr[j]) {
 					count++;
 				}
 			}
-			if (count > maxele) {
-				maxele = count;
-				number = arr[i];
-			}
+			System.out.println("Occurance of element  "+ arr[i] + " is "+count);
 		}
-		System.out.println("Max occuring number is " + number + " & its count is " + maxele);
-
 	}
 }
