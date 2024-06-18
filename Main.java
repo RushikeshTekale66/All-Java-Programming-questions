@@ -8,8 +8,14 @@ public class Main {
 		System.out.println("Enter the Number whose table you want");
 		int n = sc.nextInt();
 		System.out.println("Table is : ");
+
 		for(int i=1; i<=10; i++){
 			System.out.println(i*n); 
 		}	
+
+		System.out.println("Reverse Table is : ");
+		for(int j=10; j>0; j--){
+			System.out.println(j*n);
+		}
 	}
 } 
