@@ -1,21 +1,17 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
-// Print array element 
+ 
 public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the Number whose table you want");
+		System.out.println("Enter the Number ");
 		int n = sc.nextInt();
-		System.out.println("Table is : ");
-
-		for(int i=1; i<=10; i++){
-			System.out.println(i*n); 
-		}	
-
-		System.out.println("Reverse Table is : ");
-		for(int j=10; j>0; j--){
-			System.out.println(j*n);
+		
+		if(n%2==0){
+			System.out.println("Even");
+		}
+		else{
+			System.out.println("ODD");
 		}
 	}
 } 
