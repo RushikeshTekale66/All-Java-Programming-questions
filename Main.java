@@ -7,11 +7,10 @@ public class Main {
 		System.out.println("Enter the Number ");
 		int n = sc.nextInt();
 		
-		if(n%2==0){
-			System.out.println("Even");
+		int factorial = 1;
+		for(int i=1; i<=n; i++){
+			factorial = factorial*i;
 		}
-		else{
-			System.out.println("ODD");
-		}
+		System.out.println(factorial);
 	}
 } 
