@@ -1,96 +1,137 @@
-/**
- * Main
- */
-public class Main {
-
+class Main {
 	public static void main(String[] args) {
-		int n=5; 
+		int n = 5;
 
-		System.out.println("1 *********************");
-		for(int i=1; i<=n; i++){
-			for(int j=1; j<=i; j++){
-				System.out.print((char)(i+64));
+		// Descending trangle number pattern 1
+		/*
+		 *************************************
+		 * 11111
+		 * 2222
+		 * 333
+		 * 44
+		 * 5
+		 *************************************
+		 */
+		System.out.println("*************************************");
+		for (int i = 1; i <= n; i++) {
+			for (int k = 1; k <= i; k++) {
+				System.out.print(" ");
+			}
+
+			for (int j = 1; j <= n - i + 1; j++) {
+				System.out.print(i);
 			}
 			System.out.println();
 		}
 
-		System.out.println("2 *********************");
-		for(int i=n; i>=1; i--){
-			for(int j=i; j<=n; j++){
-				System.out.print((char)(i+96));
+		// Descending trangle number pattern 2
+		/*
+		 *************************************
+		 * 55555
+		 * 4444
+		 * 333
+		 * 22
+		 * 1
+		 *************************************
+		 */
+		System.out.println("*************************************");
+		int count = n;
+		for (int i = 1; i <= n; i++) {
+			for (int k = 1; k <= i; k++) {
+				System.out.print(" ");
+			}
+			for (int j = 1; j <= n - i + 1; j++) {
+				System.out.print(count);
+			}
+			System.out.println();
+			count--;
+		}
+
+		// Descending trangle number pattern 3
+		/*
+		 *************************************
+		 * 12345
+		 * 1234
+		 * 123
+		 * 12
+		 * 1
+		 *************************************
+		 */
+		System.out.println("*************************************");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print(" ");
+			}
+			for (int k = 1; k <= n - i + 1; k++) {
+				System.out.print(k);
 			}
 			System.out.println();
 		}
 
-		System.out.println("3 *********************");
-		for(int i=1; i<=n; i++){
-			for(int j=1; j<=i; j++){
-				System.out.print((char)(j+64));
+		// Descending trangle number pattern 4
+
+		/*
+		 *************************************
+		 * 12345
+		 * 2345
+		 * 345
+		 * 45
+		 * 5
+		 *************************************
+		 */
+
+		System.out.println("*************************************");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print(" ");
 			}
-			System.out.println();
-		}
-		
-		System.out.println("4 *********************");
-		for(int i=1; i<=n; i++){
-			for(int j=i; j>=1; j--){
-				System.out.print((char)(j+96));
+			for (int k = i; k <= n; k++) {
+				System.out.print(k);
 			}
 			System.out.println();
 		}
 
-		System.out.println("5 *********************");
-		for(int i=n; i>=1; i--){
-			for(int j=n; j>=i; j--){
-				System.out.print((char)(j+64));
+		// Descending trangle number pattern 5
+		/*
+		 *************************************
+		 * 54321
+		 * 5432
+		 * 543
+		 * 54
+		 * 5
+		 *************************************
+		 */
+		System.out.println("*************************************");
+		for (int i = 1; i <= n; i++) {
+			int count5 = 5;
+			for (int j = 0; j <= i; j++) {
+				System.out.print(" ");
+			}
+			for (int k = 1; k <= n - i + 1; k++) {
+				System.out.print(count5);
+				count5--;
 			}
 			System.out.println();
 		}
 
-		System.out.println("6 *********************");
-		for(int i=n; i>=1; i--){
-			for(int j=i; j<=n; j++){
-				System.out.print((char)(96+j));
+		// Descending trangle number pattern 6
+		/*
+		 *************************************
+		 * 54321
+		 * 4321
+		 * 321
+		 * 21
+		 * 1
+		 */
+		System.out.println("*************************************");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print(" ");
+			}
+			for (int k = n - i + 1; k >= 1; k--) {
+				System.out.print(k);
 			}
 			System.out.println();
 		}
 	}
 }
-
-/*
- 1 *********************
-A
-BB
-CCC
-DDDD
-EEEEE
-2 *********************
-e
-dd
-ccc
-bbbb
-aaaaa
-3 *********************
-A
-AB
-ABC
-ABCD
-ABCDE
-4 *********************
-a
-ba
-cba
-dcba
-edcba
-5 *********************
-E
-ED
-EDC
-EDCB
-EDCBA
-6 *********************
-e
-de
-cde
-bcde
-abcde
- */
