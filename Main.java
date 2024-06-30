@@ -5,11 +5,13 @@ class Main{
         String str = "Rushikesh ";
         Scanner sc = new Scanner (System.in);
 
-        char ch = 'R';
+        char ch = 's';
+        int count = 0;
         for(int i=0; i<str.length(); i++){
             if(ch==str.charAt(i)){
-                System.out.println("Matched");
+                count ++;
             }
         }
+        System.out.println("count of " + ch + " is "+ count);
     }
 }
