@@ -19,17 +19,13 @@ public class Main
     
 	public static void main(String[] args) {
 		Main sh = new Main();
-		
-		int sa = sh.square(10);
-		System.out.println("Square area : " + sa);
-		
-		int ra = sh.rectangle(10, 10);
-		System.out.println("Rectangle area : " + ra);
-		
-		double ta = sh.triangle(10, 10);
-		System.out.println("Triangle area : " + ta);
-		
-		double ca = sh.circle(10);
-		System.out.println("Circle area : " + ca);
+
+		System.out.println("Square area : " + sh.square(10));
+
+		System.out.println("Rectangle area : " + sh.rectangle(10, 10));
+        
+		System.out.println("Triangle area : " + sh.triangle(10, 10));
+
+		System.out.println("Circle area : " + sh.circle(10));
 	}
 }
