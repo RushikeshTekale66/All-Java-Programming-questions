@@ -1,28 +1,24 @@
 class Main{
-	String name = "Tushar";
-	int id =1;
-	int salary=1000000;
-	int exp = 0;
+	String name = "Rushikesh";
+	int id = 100;
 
-	public void getName(){
-		System.out.println("My name" + name);
+	//Static method
+	public static void getName(){
+		Main tm = new Main();
+		System.out.println("My name is " + tm.name);
 	}
+
+	//Instance method
 	public void getId(){
-		getName();
-		System.out.println("My id "+id);
+		System.out.println("My id is " + id);
 	}
-	public void getSalary(){
-		getId();
-		System.out.println("My salary" + salary);
-	}
-	public void getExperience(){
-		getSalary();
-		System.out.println("My experience" + exp);
-	}
+	public static void main(String [] args)
+	{
+		//Method calling by call name "Recomended for the static mathod"
+		Main.getName();
 
-	public static void main(String [] args){
-		System.out.println("My All information");
-		Main EM = new Main ();
-		EM.getExperience();
+		Main tm = new Main();
+		//Method calling by object
+		tm.getId();
 	}
 }
