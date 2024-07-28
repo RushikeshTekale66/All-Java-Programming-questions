@@ -1,13 +1,10 @@
 class Main{
+	String name;
+	public Main(String str){
+		this.name = str;
+	}
 	public static void main(String [] args){
-		try{
-			System.out.println("I am try block");
-		}
-		catch(Exception exception){
-			System.out.println(exception);
-		}
-		finally{
-			System.out.println("Finally");
-		}
+		Main m = new Main("Rushikesh ");
+		System.err.println(m.name);
 	}
 }
