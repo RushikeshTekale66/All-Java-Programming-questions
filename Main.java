@@ -1,7 +1,13 @@
 class Main{
 	public static void main(String [] args){
-		final String str = "Rushikesh";
-		// str = "Tekale"; //Can't reassign
-		System.out.println(str); 
+		try{
+			System.out.println("I am try block");
+		}
+		catch(Exception exception){
+			System.out.println(exception);
+		}
+		finally{
+			System.out.println("Finally");
+		}
 	}
 }
