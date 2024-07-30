@@ -1,38 +1,21 @@
-class Main {
-	public static void main(String[] args) {
-		int n = 10;
-		int x = 1;
-		int[] arr = new int[n - 1];
-
-		System.out.println("Start");
-		try {
-			try {
-				for (int i = 0; i <= arr.length; i++) {
-					try {
-						arr[i] = i / x;
-					}
-					catch (Exception e) {
-						System.out.println("Second try" + e + " " + i);
-					}
-					finally{
-						System.out.println("Second finally");
-					}
-				}
-			}
-			catch (Exception e) {
-				System.out.println("First try");
-			}
-			finally{
-				System.out.println("First finally");
-			}
-
-		}
-		catch (Exception e) {
-			System.out.println("Final Error" + e);
-		}
-		finally{
-			System.out.println("Final finally");
-		}
-		System.out.println("End");
-	}
+class Main{
+    public static void main(String [] args){
+		//1-d array
+        int [] arr= {1,2,3,4,5,6,7,8,9,10};
+        
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]);
+        }
+		System.out.println();
+       
+		//2-d array
+        int[][] arr2 = {{1,2,3},{1,2,3},{1,2,3}};
+        
+        for(int i=0; i<arr2.length; i++){
+            for(int j=0; j<arr2.length; j++){
+                System.out.print(arr2[i][j]);
+            }
+            System.out.println();
+        }
+    }
 }
