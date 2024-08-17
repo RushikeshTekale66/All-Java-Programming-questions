@@ -1,53 +1,63 @@
 import java.util.Scanner;
-public class Main
-{
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the Month : ");
-		int month = sc.nextInt();
-		
-		switch(month){
-		    case 1:
-		        System.out.println("January");
-		        break;
-		        
-		    case 2:
-		        System.out.println("February");
-		        break;
-		       
-		    case 3:
-		        System.out.print("March");
-		        break;
-		    case 4:
-		        System.out.print("April");
-		        break;
-		    case 5:
-		        System.out.print("May");
-		        break;
-		    case 6:
-		        System.out.print("June");
-		        break;
-		    case 7:
-		        System.out.print("July");
-		        break;
-		    case 8:
-		        System.out.print("August");
-		        break;
-		    case 9:
-		        System.out.print("September");
-		        break;
-		    case 10:
-		        System.out.print("Octomber");
-		        break;
-		    case 11:
-		        System.out.print("November");
-		        break;
-		    case 12:
-		        System.out.print("December");
-		        break;
-		    default : 
-		        System.out.println("Please Enter between 1-12 ");
-            
-		}
-	}
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        int fC = 100;
+        int oC = 100;
+        int tC = 100;
+        int fiC = 100;
+
+        int fiftyCount = 0;
+        int oneCount = 0;
+        int twoCount = 0;
+        int fiveCount = 0;
+
+        System.out.println("Please enter amount multiple of 50, 100, 200, 500");
+        System.out.println("Enter amount to withdraw");
+        int amount = sc.nextInt();
+
+        if (amount % 50 == 0 || amount % 100 == 0 || amount % 200 == 0 || amount % 500 == 0) {
+            while (amount >= 500) {
+                amount = amount - 500;
+                fiC--;
+                fiveCount++;
+            }
+
+            while (amount >= 200) {
+                amount = amount - 200;
+                tC--;
+                twoCount++;
+
+            }
+
+            while (amount >= 100) {
+                amount = amount - 100;
+                oC--;
+                oneCount++;
+            }
+
+            while (amount >= 50) {
+                amount = amount - 50;
+                fC--;
+                fiftyCount++;
+            }
+        }
+        else{
+            System.out.println("Please enter correct amount");
+        }
+
+        System.out.println("Total remaining Fifty Amount : " + (fC * 50));
+        System.out.println("Total remaining Two Hundread Notes : " + (tC * 200));
+        System.out.println("Total remaining Hundread Notes : " + (oC * 100));
+        System.out.println("Total remaining Five Hundread Notes : " + (fiC * 500));
+
+        System.out.println();
+        System.out.println("Total 500 Notes pickup : " + fiveCount);
+        System.out.println("Total 200 Notes pickup : " + twoCount);
+        System.out.println("Total 100 Notes pickup : " + oneCount);
+        System.out.println("Total 50 Notes pickup : " + fiftyCount);
+
+    }
 }
