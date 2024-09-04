@@ -4,15 +4,12 @@
 public class Main {
 
     public static void main(String[] args) {
-        String str = "iihhii";
-        boolean isPalindrome = true;
-
-        for(int i=0; i<str.length(); i++){
-            if(str.charAt(i)!=str.charAt(str.length()-i-1)){
-                isPalindrome = false;
-            }
+        int n=10, firstNumber = 0, secondNumber = 1;
+        for(int i=2; i<n; i++){
+            System.out.print(firstNumber + ", ");
+            int nextNumber = firstNumber + secondNumber;
+            secondNumber = firstNumber;
+            firstNumber = nextNumber;
         }
-
-        System.out.println(isPalindrome);
     }
 }
