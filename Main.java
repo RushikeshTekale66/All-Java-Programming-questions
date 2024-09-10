@@ -18,7 +18,7 @@ public class Main
         else if(age>5){
             System.out.println("Child");
         }
-        else if(age>1){
+        else if(age>=1){
             System.out.println("Baby");
         }
         else{
