@@ -5,18 +5,13 @@ class Main{
 
         int [] arr = {1, 2, 3, 5, 6, 6, 7, 9};
 
-        System.out.println("Enter the element to find out in Array : ");
-        int target = sc.nextInt();
-        
-        boolean result = false;
+        int max = 0;
 
         for(int i=0; i<arr.length; i++){
-            if(arr[i]==target){
-                result = true;
+            if(max < arr[i]){
+                max=arr[i];
             }
         }
-
-        if(result) System.out.println("Element is present in array");
-        else System.out.println("Element is not present in array");
+        System.out.println("Max element is : " + max);
     }
 }
