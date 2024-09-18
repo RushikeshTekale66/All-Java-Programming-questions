@@ -5,6 +5,6 @@ class Main{
 
         int [] arr = {1, 2, 3, 5, 6, 6, 7, 9};
 
-        System.out.println(arr[(arr.length)/2]);        
+        System.out.println("Last element of an array : " + arr[arr.length-1]);        
     }
 }
