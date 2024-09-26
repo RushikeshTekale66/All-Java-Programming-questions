@@ -1,19 +1,10 @@
 class Main{
     public static void main(String [] args){
-        String str = "Rushikesh";
-        String str2 = "Rushikesh";
-        if(str.equals(str2)){
-            System.out.println("String are equal");
+        String str = "rushikesh";
+        String str2 = "";
+        for(int i=str.length()-1; i>=0; i--){
+            str2+=str.charAt(i);
         }
-        else{
-            System.out.println("String are not equal");
-        }
-
-        if(str==str2){
-            System.out.println("String are equal");
-        }
-        else{
-            System.out.println("String are not equal");
-        }
+        System.out.println(str2);
     }
 }
