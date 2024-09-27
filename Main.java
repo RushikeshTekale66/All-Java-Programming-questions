@@ -1,10 +1,16 @@
 class Main{
     public static void main(String [] args){
-        String str = "rushikesh";
-        String str2 = "";
-        for(int i=str.length()-1; i>=0; i--){
-            str2+=str.charAt(i);
+        int [] arr = {11, 33, 55,44,  22, 66};
+
+        for(int i=0; i<arr.length; i++){
+            for(int j=i+1; j<arr.length; j++){
+                if(arr[i]>arr[j]){
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+            System.out.println(arr[i] + ", ");
         }
-        System.out.println(str2);
     }
 }
