@@ -1,4 +1,4 @@
-class MyThread1 extends Thread{
+class MyThread1 implements Runnable{
     public void run(){
         for(int i=0; i<5; i++){
             System.out.println("Thread 1 : index : " + i);
@@ -6,7 +6,7 @@ class MyThread1 extends Thread{
     }
 }
 
-class MyThread2 extends Thread{
+class MyThread2 implements Runnable{
     public void run(){
         for(int i=0; i<5; i++){
             System.out.println("Thread 2 : index : "+ i);
@@ -21,15 +21,11 @@ public class Main {
 
     public static void main(String [] args){
         MyThread1 m = new MyThread1();
-        m.start();
-        System.out.println( "Class Name of thread 1 is : " + m.getName());
-        System.out.println("Priority of thread 1 is : " + m.getPriority());
-        System.out.println("State og thread 1 is : " + m.getState());
+        Thread tt = new Thread(m);
+        tt.start();
 
         MyThread2 m2 = new MyThread2();
-        m2.start();
-        System.out.println( "Class Name of thread 2 is : " + m2.getName());
-        System.out.println("Priority of thread 2 is : " + m2.getPriority());
-        System.out.println("State of thread 2 is : " + m2.getState());
+        Thread tt2 = new Thread(m2); //Runnable interface dont support start() so convert that runnable thread into thread class
+        tt2.start();
     }
 }
