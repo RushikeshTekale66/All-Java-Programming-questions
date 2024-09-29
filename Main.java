@@ -1,14 +1,18 @@
+
 class Main {
-    public static void main(String[] args) {
-        int[] arr = { 11, 33, 55, 44, 22, 66 };
-
-        int min = arr[0];
-
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min = arr[i];
-            }
+    public void sum() throws ArithmeticException {
+        int a = 10;
+        int b = 0;
+        try {
+            int c = a / b;
+            System.out.println(c);
+        } catch (Exception e) {
+            System.out.println("Error " + e);
         }
-        System.out.println("min element is " + min);
+    }
+
+    public static void main(String[] args) {
+            Main m = new Main();
+            m.sum();
     }
 }
