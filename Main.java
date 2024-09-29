@@ -22,7 +22,9 @@ public class Main {
     public static void main(String [] args){
         MyThread1 m = new MyThread1();
         Thread tt = new Thread(m);
+        tt.setPriority(3);
         tt.start();
+
 
         MyThread2 m2 = new MyThread2();
         Thread tt2 = new Thread(m2); //Runnable interface dont support start() so convert that runnable thread into thread class
