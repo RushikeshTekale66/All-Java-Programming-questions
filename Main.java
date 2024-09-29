@@ -1,6 +1,6 @@
 
 class Main {
-    public void sum() throws ArithmeticException {
+    public void sum() throws ArithmeticException, NullPointerException {
         int a = 10;
         int b = 0;
         try {
