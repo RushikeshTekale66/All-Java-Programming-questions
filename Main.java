@@ -1,11 +1,17 @@
 
+class Addition extends RuntimeException{
+    public Addition(String msg){
+        super(msg);
+    }
+}
+
 class Main {
-    public void sum() throws ArithmeticException, NullPointerException {
+    public void sum(){
         int a = 10;
         int b = 0;
         try {
-            int c = a / b;
-            System.out.println(c);
+            System.out.println(a + b);
+            throw new Addition("Error in addition");
         } catch (Exception e) {
             System.out.println("Error " + e);
         }
