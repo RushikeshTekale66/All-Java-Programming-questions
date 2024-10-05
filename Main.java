@@ -1,7 +1,10 @@
 class Main{
     public static void main(String [] args){
         String str = "Rushikesh";
-            System.out.print(str.length());
-            System.out.print(str);
+        String str2 = "";
+        for(int i=0; i<str.length(); i++){
+            str2 =str.charAt(i) + str2 ;
+        }
+        System.out.println(str2);
     }
 }
