@@ -19,10 +19,22 @@
         System.out.println(city);
     }
  }
+
+ class Child2 extends Parent{
+    String city = "Dharashiv";
+
+    public void display3(){
+        System.out.println(city);
+    }
+ }
 public class Main {
     public static void main(String [] args){
         Child c = new Child();
         c.display();
         c.display2();
+
+        Child2 c2 = new Child2();
+        c2.display();
+        c2.display3();
     }
 }
