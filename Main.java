@@ -1,12 +1,28 @@
 /**
  * Main
  */
-public class Main {
 
+ class Parent{
+    int id = 10;
+    String name = "Rushikesh";
+
+    public void display(){
+        System.out.println(id);
+        System.out.println(name);
+    }
+ }
+
+ class Child extends Parent{
+    String city = "Pune";
+
+    public void display2(){
+        System.out.println(city);
+    }
+ }
+public class Main {
     public static void main(String [] args){
-        String str = "Rushikesh";
-        for(int i=str.length()-1; i>=0; i--){
-            System.out.print(str.charAt(i));
-        }
+        Child c = new Child();
+        c.display();
+        c.display2();
     }
 }
