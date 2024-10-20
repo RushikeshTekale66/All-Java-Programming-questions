@@ -2,45 +2,28 @@
  * Main
  */
 
- class Person{
-    String name;
-    int age;
-
-    public Person(String name, int age){
-        this.name = name;
-        this.age = age;
+ abstract class Animal{
+    public abstract void sound();
+    public void add(int a, int b){
+        System.out.println(a+b);
     }
-
-    public void show(){
-        System.out.println(name);
-        System.out.println(age);
-    }
+    public abstract void sum(int a, int b);
  }
 
- class Child extends Person{
-    double salary;
-    double exp;
-
-    public Child(double salary, double exp, String name, int age){
-        super(name, age);
-        this.salary = salary;
-        this.exp = exp;
+ class Lion extends Animal{
+    public void sound(){
+        System.err.println("Ok OOk");
     }
-
-    @Override
-    public void show(){
-        System.out.println(this.name);
-        System.out.println(this.age);
-        System.out.println(this.salary);
-        System.out.println(this.exp);
+    public void sum(int a, int b){
+        System.out.println(a+b);
     }
-
  }
-
 public class Main {
 
     public static void main(String [] args){
-        Child c = new Child(10000, 4, "Rushikesh", 10);
-        c.show();
+        Animal l = new Lion();
+        l.sound();
+        l.add(10, 10);
+        l.sum(10, 20);
     }
 }
