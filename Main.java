@@ -1,20 +1,16 @@
 class Main {
     public static void main(String[] args) {
-        String str = "Rushikesh";
+        int [] arr = {1, 2,3,4,5,6,8};
 
-        int start = 0;
-        int end = str.length()-1;
+        int n = arr.length+1;
+        
+        int expectedSum = n * (n+1)/2;
+        int actualSum = 0;
 
-        char[] charArr = str.toCharArray();
-
-        while (start<end) {
-            char temp = charArr[start];
-            charArr[start] = charArr[end];
-            charArr[end] = temp;
-            start++;
-            end--;
+        for(int i : arr){
+            actualSum +=i;
         }
-        String str2= new String (charArr);
-        System.out.println(str2);
+
+        System.out.println(expectedSum-actualSum);
     }
 }
