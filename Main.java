@@ -1,21 +1,20 @@
 class Main {
     public static void main(String[] args) {
-        int[] arr = { 10, 10, 2, 3, 4, 5, 6, 7, 7 ,7};
+        String str = "Rushikesh";
 
-        int max =0;
-        int element = arr[0];
-        for(int i=0; i<arr.length; i++){
-            int count =0;
-            for(int j=i+1; j<arr.length; j++){
-                if(arr[i]==arr[j]){
-                    count++;
-                }
-            }
-            if(max<count){
-                max+=count;
-                element = arr[i];
-            }
+        int start = 0;
+        int end = str.length()-1;
+
+        char[] charArr = str.toCharArray();
+
+        while (start<end) {
+            char temp = charArr[start];
+            charArr[start] = charArr[end];
+            charArr[end] = temp;
+            start++;
+            end--;
         }
-        System.out.println("Max occurence of element is : " + element + " & count is : " + max);
+        String str2= new String (charArr);
+        System.out.println(str2);
     }
 }
