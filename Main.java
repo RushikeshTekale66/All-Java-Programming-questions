@@ -1,14 +1,19 @@
+// Sort String
 public class Main{
 	public static void main(String[] args) {
-		int n =10;
-		int [] arr = new int [n];
-		arr[0]=0;
-		arr[1]=1;
-		for(int i=2; i<n; i++){
-		    arr[i]=arr[i-1]+arr[i-2];
+		String str1 = "Tekale";
+		char[] str = str1.toCharArray();
+		for(int i=0; i<str.length; i++){
+		    for(int j=i+1; j<str.length; j++){
+		        if(str[i]>str[j]){
+		            char temp = str[i];
+		            str[i] = str[j];
+		            str[j]=temp;
+		        }
+		    }
 		}
-		for(int i=0; i<n; i++){
-		    System.out.print(arr[i] + ", ");
-		}
+		System.out.println(new String (str));
+		
 	}
 }
+//O/P :aeeklt
