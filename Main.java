@@ -1,16 +1,12 @@
-class Main {
-    public static void main(String[] args) {
-        int [] arr = {1, 2,3,4,5,6,8};
-
-        int n = arr.length+1;
-        
-        int expectedSum = n * (n+1)/2;
-        int actualSum = 0;
-
-        for(int i : arr){
-            actualSum +=i;
-        }
-
-        System.out.println(expectedSum-actualSum);
-    }
+public class Main{
+	public static void main(String[] args) {
+		String str = "Rushikesh";
+		for(int i=0; i<str.length(); i++){
+		    for(int j=i+1; j<str.length(); j++){
+		        if(str.charAt(i)==str.charAt(j)){
+		            System.out.println(str.charAt(i));
+		        }
+		    }
+		}
+	}
 }
