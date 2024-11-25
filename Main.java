@@ -1,9 +1,10 @@
 public class Main{
+
+	public static int fibonachiNumber(int n){
+		if(n<=1) return n;
+		return fibonachiNumber(n-1)+fibonachiNumber(n-2);
+	}
 	public static void main(String[] args) {
-		String str1 = "Tekale";
-		for(int i=str1.length()-1; i>=0; i--){
-			System.out.print(str1.charAt(i));
-		}
-		
+		System.out.println(Main.fibonachiNumber(3));
 	}
 }
