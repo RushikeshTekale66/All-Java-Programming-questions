@@ -2,23 +2,20 @@ import java.util.Scanner;
 
 public class Main{
 
-	public static void Even(int a){
-		if(a%2==0){
-			System.out.println("The number is even");
-		}
-		else{
-			System.out.println("The number is Odd");
+	public static void Reverse(String str){
+		int length = str.length()-1;
+		while(length>=0){
+			System.out.println(str.charAt(length));
+			length--;
 		}
 	}
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Enter first number");
-		int a = sc.nextInt();
+		System.out.println("Enter the String");
+		String str = sc.next();
 
-		Main.Even(a);
-
-
+		Main.Reverse(str);
 	}
 }
