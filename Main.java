@@ -2,12 +2,19 @@ import java.util.Scanner;
 
 public class Main{
 
-	public static void Reverse(String str){
-		int length = str.length()-1;
-		while(length>=0){
-			System.out.println(str.charAt(length));
-			length--;
+	public static void Palindrome(String str){
+		int end = str.length()-1;
+		int start = 0;
+		boolean result = true;
+		while(start<end){
+			if(str.charAt(start)!=str.charAt(end)){
+				result = false;
+			}
+			start++;
+			end--;
 		}
+		if(result) System.out.println("String is Palindrome");
+		else System.out.println("String is not palindrome");
 	}
 
 	public static void main(String[] args) {
@@ -16,6 +23,6 @@ public class Main{
 		System.out.println("Enter the String");
 		String str = sc.next();
 
-		Main.Reverse(str);
+		Main.Palindrome(str);
 	}
 }
