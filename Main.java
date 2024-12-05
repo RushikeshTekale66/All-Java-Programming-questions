@@ -13,10 +13,18 @@ class Main{
 			arr[i] = sc.nextInt();
 		}
 
-		int max = 0;
 		for(int i=0; i<size; i++){
-			max = Math.max(max, arr[i]);
+			for(int j=i+1; j<size; j++){
+				if(arr[i]>arr[j]){
+					int temp = arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+				}
+			}
 		}
-		System.out.println(max);
+
+		for(int i=0; i<size; i++){
+			System.out.print(arr[i] + ", ");
+		}
 	}
 }
