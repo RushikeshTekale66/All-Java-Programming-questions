@@ -13,8 +13,10 @@ class Main{
 			arr[i] = sc.nextInt();
 		}
 
+		int max = 0;
 		for(int i=0; i<size; i++){
-			System.out.println(arr[i]+ ", ");
+			max = Math.max(max, arr[i]);
 		}
+		System.out.println(max);
 	}
 }
