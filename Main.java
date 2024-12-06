@@ -6,8 +6,12 @@ class Main{
 		System.out.println("Enter the String");
 		String str = sc.nextLine();
 
-		for(int i=str.length()-1; i>=0; i--){
-			System.out.println(str.charAt(i));
+		for(int i=0; i<str.length(); i++){
+			for(int j=i+1; j<str.length(); j++){
+				if(str.charAt(i)==str.charAt(j)){
+					System.out.println(str.charAt(i));
+				}
+			}
 		}
 	}
 }
