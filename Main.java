@@ -7,6 +7,6 @@ class Main{
 
 		int len = arr.length; 
 
-		System.out.println(len);
+		System.out.println(arr[len-1]);
 	}
 }
