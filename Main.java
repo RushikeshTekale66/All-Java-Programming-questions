@@ -8,7 +8,6 @@ class Main{
 		System.out.println("Line 2");
 		String str2 = sc.next();
 
-		System.out.println(str1);
-		System.out.println(str2);
+		System.out.println(str1==str2);
 	}
 }
