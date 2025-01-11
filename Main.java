@@ -3,9 +3,14 @@ class Main{
 	public static void main(String [] args){
 		Scanner sc = new Scanner(System.in);
 
-		int a = sc.nextInt();
-		int b = sc.nextInt();
+		String [] arr = {"rushi", "tekale", "rushikeshr"};
 
-		System.out.println(a+b);
+		for(int i=0; i<arr.length; i++){
+			String str = arr[i];
+			int len = str.length()-1;
+			if(str.charAt(0)==str.charAt(len)){
+				System.out.println(str);
+			}
+		}
 	}
 }
