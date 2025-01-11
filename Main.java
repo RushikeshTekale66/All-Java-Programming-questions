@@ -3,11 +3,9 @@ class Main{
 	public static void main(String [] args){
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Line 1");
-		String str1 = sc.nextLine();
-		System.out.println("Line 2");
-		String str2 = sc.next();
+		int a = sc.nextInt();
+		int b = sc.nextInt();
 
-		System.out.println(str1==str2);
+		System.out.println(a+b);
 	}
 }
