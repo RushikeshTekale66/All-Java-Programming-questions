@@ -3,14 +3,22 @@ class Main{
 	public static void main(String [] args){
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Enter string to reverse");
+		System.out.println("Enter string to check palindrome");
 		String str = sc.nextLine();
-		String str2 = "";
 
-		for(int i=str.length()-1; i>=0; i--){
-			System.out.print(str.charAt(i));
-			str2 = str2+str.charAt(i);
+		boolean result = true;
+		
+		for(int i=0; i<str.length()/2; i++){
+			if(str.charAt(i)!=str.charAt(str.length()-1-i)){
+				result = false;
+			}
 		}
-		System.out.println("\n" + str2);
+
+		if(result){
+			System.out.println("String is palindrom");
+		}
+		else{
+			System.out.println("String is not palindrom");
+		}
 	}
 }
