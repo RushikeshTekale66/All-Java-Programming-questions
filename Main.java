@@ -1,18 +1,15 @@
 public class Main {
 
 	public static void main(String[] args) {
-		int number = 15;
+		String str = "Rushikesh Tekale";
+		int count = 0;
 
-		//Least significant digit
-		int lsd = number%10;
-
-		//Most significant digit
-		int msd = number;
-		while(msd>=10){
-			msd/=10;
+		for (int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+			if (ch >='a' && ch <= 'z') {
+				count++;
+			}
 		}
-
-		System.err.println("LSD : " + lsd);
-		System.out.println("MSD : " + msd);
+		System.out.println(count);
 	}
 }
