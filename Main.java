@@ -1,42 +1,24 @@
 public class Main {
+
     public static void main(String[] args) {
-        String str = "olleh dlrow";
-        System.out.println("Original String: " + str);
+        String str = "Rushikesh";
 
-        String result = reverseEachWord(str);
-        System.out.println("Reversed Each Word: " + result);
-    }
+        System.out.println("Print character at given index : " + str.charAt(2));
+        System.out.println("Check the string contains the sequence of character Rushi : "+ str.contains("Rushi"));
 
-    public static String reverseEachWord(String str) {
-        String result = "";
-        String word = "";
+        System.out.println("Check the String starts with R : " + str.startsWith("u"));
+        System.out.println("Check the String ends with h : " + str.endsWith("h"));
 
-        for (int i = 0; i < str.length(); i++) {
-            char current = str.charAt(i);
+        System.out.println("Print the hash code of string : " + str.hashCode());
 
-            if (current == ' ') {
-                // Reverse the current word and append it to the result
-                result += reverseWord(word) + " ";
-                word = ""; // Reset word
-            } else {
-                word += current; // Build the current word
-            }
-        }
+        System.out.println("Print the index of character in string R : " + str.indexOf("R"));
+        System.out.println("Print the last index of character h : " + str.lastIndexOf("h"));
 
-        // Reverse and append the last word (if any)
-        if (!word.isEmpty()) {
-            result += reverseWord(word);
-        }
+        System.out.println("Replace the character in string R : " + str.replace("R", "T"));
+        System.out.println("Replace all the characters in the string h : " + str.replaceAll("h", "hh"));
+        System.out.println("Replace the first occurance of character only h : " + str.replaceFirst("h", "T"));
 
-        return result.trim(); // Remove trailing space if any
-    }
-
-    // Helper method to reverse a word
-    public static String reverseWord(String word) {
-        String reversed = "";
-        for (int i = word.length() - 1; i >= 0; i--) {
-            reversed += word.charAt(i);
-        }
-        return reversed;
+        System.out.println("Convert string in to lowercase : " + str.toLowerCase());
+        System.out.println("Convert string into the uppercase : " + str.toUpperCase());
     }
 }
