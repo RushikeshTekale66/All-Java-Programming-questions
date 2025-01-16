@@ -1,23 +1,24 @@
 public class Main {
 
     public static void main(String[] args) {
-        String str = "Rushikesh Ramesh Tekale";
-        String [] arr = str.split(" ");
+        String str = "Rushikesh";
+        char [] ch = str.toCharArray();
+        int count = 0;
 
-        String result = "";
-        
-        for(String s : arr){
-            String s1 = "";
-            for(int i=s.length()-1; i>=0; i--){
-                s1 = s1 + s.charAt(i);
+        for(int i=0; i<str.length(); i++){
+            if(str.charAt(i)>'a' && str.charAt(i)<'z'){
+                count++;
             }
-            result = result + s1 + " ";
         }
 
-        result = result.trim();
+        int count2 = 0;
+        for (char c : ch) {
+            if(c>'a' && c<'z'){
+                count2++;
+            }
+        }
 
-        System.out.println(result);
-
-       
+        System.out.println(count);
+        System.out.println(count2);
     }
 }
