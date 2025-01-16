@@ -5,7 +5,11 @@ public class Main {
         String [] arr = str.split(" ");
         
         for(String s : arr){
-            System.out.println(s);
+            System.out.print(s + " : ");
+            for(int i=s.length()-1; i>=0; i--){
+                System.out.print(s.charAt(i));
+            }
+            System.out.println();
         }
 
        
