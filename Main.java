@@ -1,25 +1,17 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
-
     public static void main(String[] args) {
-        String str = "iii";
-        char [] ch = str.toCharArray();
-
-        int start = 0, end = ch.length-1;
-
-        boolean result = true;
-
-        while (start<end) {
-            if(ch[start]!=ch[end]){
-                result = false;
+        int digits[ ] = {1, 2, 3};
+        for (int i = 0; i < digits.length; i++) {
+            for (int j = 0; j < digits.length; j++) {
+                for (int k = 0; k < digits.length; k++) {
+                    if (i != j && j != k && i != k) { // Ensure unique digits
+                        System.out.println("" + digits[i] + digits[j] + digits[k]);
+                    }
+                }
             }
-            start++;
-            end--;
-        }
-        if(result){
-            System.out.println("Palindrome");
-        }
-        else{
-            System.out.println("Not palindrome");
         }
     }
 }
