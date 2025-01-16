@@ -1,14 +1,25 @@
 public class Main {
 
     public static void main(String[] args) {
-        String str = "Rushikesh";
+        String str = "iii";
         char [] ch = str.toCharArray();
 
-        String result = "";
-        for(int i=ch.length-1; i>=0; i--){
-            result = result + ch[i];
-        }
+        int start = 0, end = ch.length-1;
 
-        System.out.println(result);
+        boolean result = true;
+
+        while (start<end) {
+            if(ch[start]!=ch[end]){
+                result = false;
+            }
+            start++;
+            end--;
+        }
+        if(result){
+            System.out.println("Palindrome");
+        }
+        else{
+            System.out.println("Not palindrome");
+        }
     }
 }
